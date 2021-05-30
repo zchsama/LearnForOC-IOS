@@ -9,8 +9,9 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *questionLabel;
 @property (nonatomic, weak) IBOutlet UILabel *answerLabel;
+@property (nonatomic, weak) IBOutlet UILabel *currentQuestionLabel;
+@property (nonatomic, weak) IBOutlet UILabel *nextQuestionLabel;
 
 - (IBAction) showNextQuestion:(id)sender;
 - (IBAction) showAnswer:(id)sender;

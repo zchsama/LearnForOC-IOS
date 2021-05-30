@@ -1,0 +1,6 @@
+framework module Pods_Buggy {
+  umbrella header "Pods-Buggy-umbrella.h"
+
+  export *
+  module * { export * }
+}
