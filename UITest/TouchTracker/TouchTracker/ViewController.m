@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "DrawView.h"
 
 @interface ViewController ()
 
@@ -18,5 +19,9 @@
     // Do any additional setup after loading the view.
 }
 
+- (void) loadView
+{
+    self.view = [[DrawView alloc] initWithFrame:CGRectZero];
+}
 
 @end

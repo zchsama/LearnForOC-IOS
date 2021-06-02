@@ -16,6 +16,8 @@
 		473DAB62266757EA003C072D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 473DAB61266757EA003C072D /* main.m */; };
 		473DAB6C266757EA003C072D /* TouchTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 473DAB6B266757EA003C072D /* TouchTrackerTests.m */; };
 		473DAB77266757EA003C072D /* TouchTrackerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 473DAB76266757EA003C072D /* TouchTrackerUITests.m */; };
+		473DAB8626675D13003C072D /* Line.m in Sources */ = {isa = PBXBuildFile; fileRef = 473DAB8526675D13003C072D /* Line.m */; };
+		473DAB8926675E2C003C072D /* DrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 473DAB8826675E2C003C072D /* DrawView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		473DAB72266757EA003C072D /* TouchTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TouchTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		473DAB76266757EA003C072D /* TouchTrackerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchTrackerUITests.m; sourceTree = "<group>"; };
 		473DAB78266757EA003C072D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		473DAB8426675D13003C072D /* Line.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Line.h; sourceTree = "<group>"; };
+		473DAB8526675D13003C072D /* Line.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Line.m; sourceTree = "<group>"; };
+		473DAB8726675E2C003C072D /* DrawView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DrawView.h; sourceTree = "<group>"; };
+		473DAB8826675E2C003C072D /* DrawView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DrawView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +117,10 @@
 				473DAB55266757E9003C072D /* ViewController.h */,
 				473DAB56266757E9003C072D /* ViewController.m */,
 				473DAB58266757E9003C072D /* Main.storyboard */,
+				473DAB8426675D13003C072D /* Line.h */,
+				473DAB8726675E2C003C072D /* DrawView.h */,
+				473DAB8826675E2C003C072D /* DrawView.m */,
+				473DAB8526675D13003C072D /* Line.m */,
 				473DAB5B266757EA003C072D /* Assets.xcassets */,
 				473DAB5D266757EA003C072D /* LaunchScreen.storyboard */,
 				473DAB60266757EA003C072D /* Info.plist */,
@@ -266,7 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473DAB8626675D13003C072D /* Line.m in Sources */,
 				473DAB57266757E9003C072D /* ViewController.m in Sources */,
+				473DAB8926675E2C003C072D /* DrawView.m in Sources */,
 				473DAB51266757E9003C072D /* AppDelegate.m in Sources */,
 				473DAB62266757EA003C072D /* main.m in Sources */,
 				473DAB54266757E9003C072D /* SceneDelegate.m in Sources */,
