@@ -19,6 +19,9 @@
 @property (nonatomic, strong) UITextField *serialNumberTextField;
 @property (nonatomic, strong) UITextField *valueTextField;
 
+@property (nonatomic, strong) UIImageView *itemImageView;
+@property (nonatomic, strong) UIToolbar *itemToorbar;
+ 
 //- (NSString *) numberFormatter: (void(^)(int))itemDollars;
 
 @end
@@ -52,13 +55,31 @@
         make.top.mas_equalTo(self.view.mas_top).offset(8);
         make.left.mas_equalTo(self.view.mas_left).offset(8);
         make.right.mas_equalTo(self.view.mas_right).offset(-8);
-        make.bottom.mas_equalTo(self.view.mas_bottom).offset(-8);
+        //make.bottom.mas_equalTo(self.view.mas_bottom).offset(-8);
     }];
     
     [self setChildStackView];
     [self setLabelUI];
+    [self setImageViewUI];
+    
     [self.itemStackView setNeedsLayout];
     [self.itemStackView layoutIfNeeded];
+    
+    self.itemToorbar = [[UIToolbar alloc] init];
+    
+    UIBarButtonItem *camera = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera menu:nil];
+    [self.itemToorbar setItems:[NSArray arrayWithObject:camera]];
+    [self.view addSubview:self.itemToorbar];
+    
+    [self.itemToorbar mas_makeConstraints:^(MASConstraintMaker *make)
+     {
+        make.top.mas_equalTo(self.itemStackView.mas_bottom).offset(20);
+        make.left.mas_equalTo(self.itemStackView);
+        make.right.mas_equalTo(self.itemStackView);
+        make.height.mas_equalTo(@44);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+        //make.bottom.mas_equalTo(self.view.mas_bottom).offset(-8);
+    }];
 }
 
 - (void) viewWillAppear:(BOOL)animated
@@ -177,6 +198,17 @@
     [self.dateCreatedLabel setText:@"Date Created"];
     [self.dateCreatedLabel setTextAlignment:NSTextAlignmentCenter];
     
+}
+
+- (void) setImageViewUI
+{
+    self.itemImageView = [[UIImageView alloc] init];
+    [self.itemStackView addArrangedSubview:self.itemImageView];
+    
+    [self.itemImageView setContentHuggingPriority: 248 forAxis:UILayoutConstraintAxisVertical];
+    [self.itemImageView setContentCompressionResistancePriority:749 forAxis:UILayoutConstraintAxisVertical];
+    //按照宽高比缩放图片大小
+    [self.itemImageView setContentMode:UIViewContentModeScaleAspectFit];
 }
 
 /*
